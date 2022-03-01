@@ -1,6 +1,6 @@
 /*
 	The task for this laboratory assignment is to rewrite the
-	functions 1-5 to their corresponding 'Arrow functions'.
+	functions 1-4 to their corresponding 'Arrow functions'.
 */
 
 
