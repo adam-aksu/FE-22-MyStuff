@@ -1,13 +1,11 @@
-/*
-	The task for this laboratory assignment is to rewrite the
-	functions 1-4 to their corresponding 'Arrow functions'.
-*/
+/*	The task for this laboratory assignment is to rewrite the
+	functions 1-4 to their corresponding 'Arrow functions'.	*/
 
 
 /*	F U N C T I O N   1 
 	= = = = = = = = = = = = = = = = = = = =
 
-const hello = function(){
+	const hello = function(){
 	console.log('Hello world');
 }
 */
