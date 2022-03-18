@@ -21,9 +21,7 @@ console.log(dZone);
 
 // ---------------------------------------------------------------
 
-
-
-setInterval( function() {
+const myFunc = function() {
 	let d = new Date();
 	dString = d.toString()
 
@@ -38,4 +36,7 @@ setInterval( function() {
 		x=0;
 	
 
-}, 1000);
+}
+
+myFunc();
+setInterval(myFunc, 1000);
