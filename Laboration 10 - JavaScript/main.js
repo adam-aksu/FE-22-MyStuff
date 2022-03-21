@@ -7,20 +7,6 @@ const cl = [
 	
 let x = 0;
 
-// ---------------------------------------------------------------
-const d = new Date() // today, now
-
-dString = d.toString()
-dDate = dString.substr(0, 15);
-dTime = dString.substr(16, 8);
-dZone = dString.substr(25, 8);
-
-console.log(dDate);
-console.log(dTime);
-console.log(dZone);
-
-// ---------------------------------------------------------------
-
 const myFunc = function() {
 	let d = new Date();
 	dString = d.toString()
@@ -29,14 +15,12 @@ const myFunc = function() {
 	document.getElementById("time").innerHTML = dString.substr(16, 8);
 	document.getElementById("zone").innerHTML = dString.substr(25, 8);
 
-
 	document.getElementById("datebox").style.background = cl[x++];
 
 	if(x >= cl.length)
 		x=0;
-	
 
+	setTimeout(myFunc , 1000);
 }
 
 myFunc();
-setInterval(myFunc, 1000);
