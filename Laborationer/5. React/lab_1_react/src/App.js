@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Book from './components/Book'
+import Navbar from './components/Navbar'
 
 const App = () => {
 
@@ -32,12 +33,14 @@ const App = () => {
 	])
 
   return (
-	<div>
-		App
+	<div><Navbar />
+	<div className='container'>
+		
 		{books.map(book => (
 			<Book key={book.id} title={book.title} author={book.author} summary={book.summary}/>
 		))}
 		
+	</div>
 	</div>
   )
 }
