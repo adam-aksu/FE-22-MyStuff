@@ -1,4 +1,0 @@
-Purpose of this file is to make github track empty directories.
-Can be removed when the directory has content and is tracked.
-
-/Adam
