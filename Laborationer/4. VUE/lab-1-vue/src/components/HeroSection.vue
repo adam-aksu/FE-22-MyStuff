@@ -1,6 +1,5 @@
 <template>
-
-  <div class="main-content">
+	<div class="main-content">
 		<div class="cta mt-5 py-5 mx-5">
 			<div class="text-center px-md-5 mx-md-5 dark-grey-text">
 				<h3 class="font-weight-bold mb-4">Call to action</h3>
@@ -10,23 +9,22 @@
 						tenetur quo ut rerum debitis eum nemo exercitationemasperiores
 						soluta blanditiis velit, dolores optio cumque facilis! Lorem
 						ipsum dolor sit amet consectetur adipisicing elit. </p>
-					</div>
+				</div>
 					<button @click=(printToConsole()) class="btn btn-dark btn-md btn-rounded">Action</button>
 			</div>
-				</div>
+		</div>
 	</div>
-
 </template>
 
 <script>
-export default {
-	methods: {
-		printToConsole() {
-			console.log("You clicked the button!")
+	export default {
+		methods: {
+			printToConsole() {
+				console.log("You clicked the button!")
+			}
 		}
-	}
 
-}
+	}
 </script>
 
 <style>
@@ -38,10 +36,10 @@ export default {
 		max-width: 600px;
 	}
 
-.text-div {
-	display: flex;
-	justify-content: center;
-}
+	.text-div {
+		display: flex;
+		justify-content: center;
+	}
 
 	.text {
 		text-align: center;
