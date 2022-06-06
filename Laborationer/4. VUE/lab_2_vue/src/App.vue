@@ -1,26 +1,47 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<div>
+		<NavigationBar  :isLoggedIn="isLoggedIn" :user="user" @logOutApp="logOut"/>
+		<LoginForm  :isLoggedIn="isLoggedIn" :show="show" @logInApp="logIn"/>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LoginForm from './components/LoginForm.vue'
+import NavigationBar from './components/NavigationBar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    NavigationBar,
+    LoginForm
+    
+  },
+	data() {
+		return {
+		show: true,
+		isLoggedIn: false,
+		user: {}
+		};
+	},
+	methods: {
+		logIn(user) {
+			this.user = user;
+			this.isLoggedIn = true;
+			this.show = false;
+			// console.log('inne i app-logIn')
+			// console.log(this.user.name)
+		},
+		logOut() {
+			this.user = {};
+			this.isLoggedIn = false;		
+			this.show = true;
+	
+		}
+	}
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
