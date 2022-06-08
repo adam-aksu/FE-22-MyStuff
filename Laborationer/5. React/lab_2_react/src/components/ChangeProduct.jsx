@@ -1,7 +1,6 @@
 import {useState, useRef, useEffect} from 'react'
 
 const ChangeProduct = ( {product, changeText} ) => {
-
 	const [text, setText] = useState(product.name)
 	const input = useRef()
 
@@ -21,5 +20,4 @@ const ChangeProduct = ( {product, changeText} ) => {
 		</form>
 	)
 }
-
 export default ChangeProduct

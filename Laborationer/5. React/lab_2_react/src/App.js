@@ -8,14 +8,14 @@ import Header from './components/Header';
 const App = () => {
 
 	const [products, setProducts] = useState([
-		{	id: '123abc',
-			name: 'Apple',
-			done: false
-		},
-		{	id: '124bcd',
-			name: 'Milk',
-			done: false
-		},
+		// {	id: '123abc',
+		// 	name: 'Apple',
+		// 	done: false
+		// },
+		// {	id: '124bcd',
+		// 	name: 'Milk',
+		// 	done: false
+		// },
 	])
 
 	const clearList = () => {

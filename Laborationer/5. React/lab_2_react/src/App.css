@@ -97,7 +97,8 @@
 .prod_list {
 	margin-top: 3rem;
 	border-top: 1px solid #c9cdce;
-	height: 40vh;
+	min-height: 40vh;
+	height: auto;
 }
 
 .done {

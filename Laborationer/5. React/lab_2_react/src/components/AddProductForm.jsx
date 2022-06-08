@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 const AddProductForm = ({addProduct, clearList}) => {
-
 	const [productName, setProductName] = useState('')
+	const input = useRef()
 
 	const handleSubmit = e => {
 		e.preventDefault()
-
-		if(productName.trim() === '') return
+		input.current.focus()
+		
+		if(productName.trim() === '')
+			return
 
 		addProduct(productName)
 		setProductName('')
@@ -17,7 +19,7 @@ const AddProductForm = ({addProduct, clearList}) => {
 		<form  onSubmit={handleSubmit}>
 			<div id="form_controls" className=" ">
 				<div className='form-input'>
-					<input type="text" value={productName} onChange={e => {setProductName(e.target.value)} } placeholder='Varans namn' className='form-control-lg '/>
+					<input type="text" ref={input} value={productName} onChange={e => {setProductName(e.target.value)} } placeholder='Varans namn' className='form-control-lg '/>
 					<button className="button_add btn-lg btn-dark">Lägg till</button>
 				</div>
 				<div>
